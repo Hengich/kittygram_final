@@ -59,6 +59,7 @@ export const SignIn = ({ extraClass = "" }) => {
           if (err.non_field_errors) {
             setErrorPassword("Неправильный логин или пароль");
           } else {
+            console.log(err)
             setErrorPassword("Ошибка сервера");
           }
         });

@@ -22,12 +22,12 @@ services:
     image: hengich/kittygram_frontend
     command: cp -r /app/build/. /static/
     volumes:
-      - static:/frontend_static
+      - static:/static
   gateway:
     image: hengich/kittygram_gateway
     env_file: .env
     ports:
       - 8080:80
     volumes:
-      - static:/staticfiles/
+      - static:/static
       - media:/media

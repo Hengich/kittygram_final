@@ -12,14 +12,14 @@ services:
     volumes:
       - pg_data:/var/lib/postgresql/data
   backend:
-    image: hengich/kittygram_backend/S
+    image: hengich/kittygram_backend
     env_file: .env
     volumes:
       - static:/backend_static/
       - media:/app/media
   frontend:
     env_file: .env
-    image: hengich/kittygram_frontend/
+    image: hengich/kittygram_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static:/frontend_static/

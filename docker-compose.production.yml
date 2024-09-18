@@ -30,4 +30,4 @@ services:
       - 8080:80
     volumes:
       - static:/staticfiles/
-      - media:/media
+      - media:/app/media

@@ -17,6 +17,8 @@ services:
     volumes:
       - static:/backend_static/
       - media:/app/media
+    depends_on:
+      - db
   frontend:
     env_file: .env
     image: hengich/kittygram_frontend/
@@ -31,3 +33,6 @@ services:
     volumes:
       - static:/staticfiles/
       - media:/media
+    depends_on:
+      - backend
+      - frontend

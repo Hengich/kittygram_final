@@ -11,7 +11,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = os.getenv('DEBUG', False) == 'True'
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", '').split(',')
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'danesakov.myftp.org', '89.169.167.181']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
